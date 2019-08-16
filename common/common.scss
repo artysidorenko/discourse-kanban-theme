@@ -55,9 +55,11 @@
 		display:flex;
 		flex-direction: column;
 		align-items: flex-end;
-		min-width: 50px;
-		width: calc((100vw - #{$large-width})/2 - 4px);
-		flex-shrink: 0;
+// 		Min width changed and rest commented out by Arty to fix left hand margin:
+		min-width: 100px;
+// 		min-width: 50px;
+// 		width: calc((100vw - #{$large-width})/2 - 4px);
+// 		flex-shrink: 0;
 		padding: 0;
 		margin: 0;
 
