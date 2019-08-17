@@ -7,7 +7,7 @@ display_list:
   type: list
   default: ""
   description:
-    en: A list of categories or tags where the "Board" button should appear. If left blank, it will be shown everywhere. Use @ to denote the top level view.
+    en: A list of categories or tags where the "Board" button should appear. If left blank, it will be shown everywhere. Use @ to denote the top level view. Prefix entries with ^ symbol to instead exclude categories/tags (will be shown everywhere except the excluded list)
 display_modes:
   type: list
   default: ""

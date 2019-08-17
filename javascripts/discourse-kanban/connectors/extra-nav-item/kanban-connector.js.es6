@@ -12,9 +12,14 @@ export default {
         if (settings.display_list === "") return true;
 
         const displayList = settings.display_list.split("|");
+
         const lookup = settings.discovery_mode === "category" ? component.get("category.slug") || "@"
             : settings.discovery_mode === "tag" ? component.get("selectedNavItem.tagId") || "@"
             : component.get("category.slug") || component.get("selectedNavItem.tagId") || "@"
+
+        if (displayList.every(e => e.slice(0, 1) === "^")) {
+            return !displayList.map(e => e.slice(1)).includes(lookup)
+        }
 
         return displayList.includes(lookup)
     }
