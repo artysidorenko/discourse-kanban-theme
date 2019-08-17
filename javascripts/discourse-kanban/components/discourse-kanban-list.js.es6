@@ -15,6 +15,7 @@ export default Ember.Component.extend({
     },
 
     loadTopics() {
+      console.log('loadTopics fired')
       this.set("loading", true);
 
       this.refreshTopics();

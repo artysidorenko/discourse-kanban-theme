@@ -12,7 +12,7 @@ display_modes:
   type: list
   default: ""
   description:
-    en: "Override the default board display mode for each category/tag. Use the syntax `category:mode:params`/`tag:mode:params`. For example, `support:assigned:david,sam,joffrey`. Use @ to denote the top level view. Use @untagged to display an untagged column. Note: a board in tag discovery mode and tag display mode will not include the discovery tag as column on the board"
+    en: "Override the default board display mode for each category/tag. Use the syntax `category:mode:params`/`tag:mode:params`. For example, `support:assigned:david,sam,joffrey`. Use @ to denote the top level view. Use @untagged to display an untagged column. Use $ to enter a single default mode for ALL boards, for example, `$:tags:doing,done`"
 require_confirmation:
   default: true
   description:

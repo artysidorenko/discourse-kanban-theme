@@ -236,9 +236,16 @@ export default Ember.Service.extend({
           this.get("discoveryTag.id") ||
           "@";
       const defaultMode = setDefaults.find(m => m[0] === lookup);
+      const masterMode = setDefaults.find(m => m[0] === '$');
+
       if (defaultMode && descriptor === "default") {
         defaultMode.shift();
         descriptor = defaultMode.join(":");
+      }
+
+      else if (masterMode) {
+        masterMode.shift();
+        descriptor = masterMode.join(":");
       }
 
       if (descriptor === "default") {
